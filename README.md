@@ -1,2 +1,1 @@
-# Movies_App_Vue.js
-A movies app using Vue,js
+<h1 align="center"> Vue.js 3.0 Movies App </h1>
