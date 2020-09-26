@@ -1,26 +1,59 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home">
+    <h1>{{ title }}</h1>
+    <p>Movie Count: {{ movieCount }}</p>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  data() {
+    return {
+      title: "Vue Movies",
+      movies: [
+        {
+          title: "Star Wars",
+          poster:
+            "https://images-na.ssl-images-amazon.com/images/I/81RZipc6yOL._AC_SL1500_.jpg",
+        },
+        {
+          title: "Silence of the Lambs",
+          poster:
+            "https://images-na.ssl-images-amazon.com/images/I/410VHPrwUPL._AC_.jpg",
+        },
+        {
+          title: "Ghostbusters",
+          poster:
+            "https://images-na.ssl-images-amazon.com/images/I/51Hdl8C50%2BL._AC_SL1023_.jpg",
+        },
+      ],
+    };
+  },
+  watch: {
+    // Used to watch when data changes, runs a function
+  },
+  computed: {
+    // Used for getting computed state values
+    // Goes OUTSIDE data()
+    movieCount() {
+      return this.movies.length;
+    },
+  },
+  methods: {
+    // place any functions or hooks here
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "./assets/global.css";
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 </style>
