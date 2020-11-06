@@ -1,4 +1,4 @@
-<h1 align="center"> Vue.js 3.0 Movies App </h1>
+<h1 align="center"> Vue.js 3.0 ToDo App </h1>
 <h3 align="center">Created as a learning guide to Vue 3</h3>
 <h2 align="center"> Tools </h2>
 
