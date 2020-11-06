@@ -13,6 +13,14 @@
 <details>
 <summary>Notes</summary>
 
+<h4>Starting the App</h4>
+
+```
+
+
+```
+
+
 <h4 align="center">Component Structure:</h4>
 
 ```

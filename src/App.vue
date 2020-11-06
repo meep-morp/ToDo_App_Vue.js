@@ -1,8 +1,18 @@
 <template>
-  <div class="home">
-    <h1>{{ title }}</h1>
-    <p>Movie Count: {{ movieCount }}</p>
-  </div>
+  <h1>Vue 3 Todo App</h1>
+  <form @submit.prevent="addNewTodo">
+    <label>New Todo</label>
+    <input v-model="newTodo" name="newTodo">
+    <button>Add New Todo</button>
+  </form>
+  <button @click="removeAllTodos">Remove All</button>
+  <button @click="markAllDone">Mark All Done</button>
+  <ul>
+    <li v-for="(todo, index) in todos" :key="todo.id" class="todo">
+      <h3 :class="{ done: todo.done }" @click="toggleDone(todo)">{{todo.content}}</h3>
+      <button @click="removeTodo(index)">Remove Todo</button>
+    </li>
+  </ul>
 </template>
 
 <script>
