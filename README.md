@@ -16,7 +16,7 @@
 <h4>Starting the App</h4>
 
 ```
-
+npm run serve
 
 ```
 
